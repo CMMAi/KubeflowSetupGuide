@@ -64,3 +64,24 @@
  * then you could get the deployment url by ```echo http://$INGRESS_HOST:$INGRESS_PORT```
  
  #### For more detail, please checkout https://www.kubeflow.org/docs/started/workstation/minikube-linux/
+ 
+ ## Zinfandel 可行性評估
+ ### Single Node
+ * Kubeflow appliance
+   * MiniKF by [Vagrant](https://www.vagrantup.com/downloads.html) -> 跟 vmware 結合
+   * MicroK8s -> 部署極為方便，彈性較低
+   * Minikube -> Single Node Kubernetes 彈性大
+ ### [Kubernetes Installation](https://www.kubeflow.org/docs/started/k8s/) -> Server 需支援 Kubernetes，能發揮 Containerized 帶來的所有優勢
+ 
+ ## [Kubeflow Components](https://www.kubeflow.org/docs/components/)
+ * Jupyter Server
+   * GUI 分配硬體支援（類似 CoLab）
+   * 支援 CPU, GPU 版 TF 1.5, 2.0
+     - [ ] Pytorch 支援待確認，但套件基本可自行安裝
+ * [Katib](https://www.kubeflow.org/docs/components/hyperparameter-tuning/) for Hyperparameter Tuning
+   ![](https://www.kubeflow.org/docs/images/katib-random-example-graph.png)
+ * [Pipelines](https://www.kubeflow.org/docs/pipelines/) -> 感覺很酷炫，訓練過程可視化，修改方便！？
+   ![](https://www.kubeflow.org/docs/images/pipelines-xgboost-graph.png)
+   * [Display Results like TensorBoard](https://www.kubeflow.org/docs/pipelines/sdk/output-viewer/)
+     ![](https://www.kubeflow.org/docs/images/taxi-tip-roc-step-output.png)
+ 

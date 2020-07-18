@@ -84,4 +84,7 @@
    ![](https://www.kubeflow.org/docs/images/pipelines-xgboost-graph.png)
    * [Display Results like TensorBoard](https://www.kubeflow.org/docs/pipelines/sdk/output-viewer/)
      ![](https://www.kubeflow.org/docs/images/taxi-tip-roc-step-output.png)
+ * [KFServing](https://www.kubeflow.org/docs/components/serving/kfserving/)
+   ![](https://www.kubeflow.org/docs/components/serving/kfserving.png)
+ * [Frameworks for Training](https://www.kubeflow.org/docs/components/training/)
  

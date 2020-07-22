@@ -65,6 +65,20 @@
  
  #### For more detail, please checkout https://www.kubeflow.org/docs/started/workstation/minikube-linux/
  
+ ### MacOS
+ #### Docker, kubectl, Minikube
+ ```
+ brew cask install docker
+ brew install minikube
+ ```
+ then
+ ```
+ minikube start --cpus 6 --memory 12288 --disk-size=120g --extra-config="apiserver.authorization-mode=Node,RBAC" --extra-config=kubelet.resolv-conf=/run/systemd/resolve/resolv.conf --extra-config kubeadm.ignore-preflight-errors=SystemVerification
+ ```
+  * ```--extra-config="apiserver.authorization-mode=Node,RBAC"```, please refer to [this issue](https://github.com/kubernetes/minikube/issues/6061#issuecomment-566190474)
+  
+ #### Others are the same as Linux part
+ 
  ## Zinfandel 可行性評估
  ### Single Node
  * Kubeflow appliance
